@@ -1,0 +1,21 @@
+from tkinter import*
+import tkinter as tk
+window= Tk() 
+window.title("currency converter")
+window.geometry("350x100")
+l1= Label(window,text="Enter amount of USD:")
+l2= Label(window,text="Great British Pounds")
+def convert():
+    number= enter.get()
+    gbp= float(number)*(3/4)
+    t1.delete("1.0",END)
+    t1.insert(END,gbp)
+button= Button(window,text="Convert",command= convert)
+enter= Entry(window)
+t1= Text(window,height=1,width=20)
+l1.grid(row=0,column=0)
+enter.grid(row=0,column=1)
+button.grid(row=0,column=2)
+l2.grid(row=1,column=0)
+t1.grid(row=2,column=1)
+window.mainloop()
